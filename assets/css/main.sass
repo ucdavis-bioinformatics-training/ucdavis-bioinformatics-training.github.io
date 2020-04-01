@@ -7,7 +7,7 @@ body
   flex-direction: column
 
 a
-  color: #bdbdbd
+  // color: #bdbdbd
 
 a:hover
   text-decoration: underline
@@ -33,9 +33,33 @@ header
   a:hover
     text-decoration: none
 
-  .background
-    background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
-    background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
+  // .background
+  //   background: linear-gradient(90deg, blue 10%, red 90%)
+
+  .userView
+    box-sizing: border-box
+    overflow: auto
+
+    .circle
+      background-color: #fff
+
+    .text-container
+      margin: 16px 0
+      padding: 8px 12px
+      border-radius: 4px
+      background-color: rgba( 0, 0, 0, .5 )
+
+      .name
+        margin-top: 0
+      .email
+        padding-bottom: 0
+
+        a
+          color: #fff
+          transition: .1s linear all
+
+          &:hover
+            color: #90caf9
 
 a
   &.button-collapse
@@ -51,7 +75,7 @@ a
       z-index: 999
       line-height: 80px
 
-nav 
+nav
   .page-title
     font-size: 36px
     font-weight: bold
@@ -73,7 +97,7 @@ footer.page-footer
 
 // Misc
 blockquote
-  border-left-color: teal
+  border-left-color: #FFBF00
 
 main
   ul
@@ -87,9 +111,9 @@ main
   header,
   main,
   footer
-    padding-left: 0
+    padding-left: 300px
 
-  nav 
+  nav
     .nav-wrapper
       text-align: center
 

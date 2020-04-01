@@ -16,7 +16,7 @@
 title: ucdavis-bioinformatics-training
 description: > # this means to ignore newlines until "baseurl:"
   Site for UC Davis Bioinformatics Core Training Materials
-baseurl: "/"
+baseurl: ""
 url: "https://ucdavis-bioinformatics-training.github.io"
 permalink: /:year/:month/:day/:title
 repository: ucdavis-bioinformatics-training/ucdavis-bioinformatics-training.github.io
@@ -27,13 +27,13 @@ github_profile: "https://github.com/ucdavis-bioinformatics-training"
 user: "UC Davis Bioinformatics Core"
 user_email: "bioinformatics.core@ucdavis.edu  "
 contact_url: "http://bioinformatics.ucdavis.edu"
-google_tracking_id: 
-google_site_verification: 
-disqus_shortname: 
+google_tracking_id:
+google_site_verification:
+disqus_shortname:
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag

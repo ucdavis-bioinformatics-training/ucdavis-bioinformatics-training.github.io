@@ -1,0 +1,26 @@
+---
+---
+$aggieBlue: #022851
+$aggiGold: #FFBF00
+$aggieSunflower: #FFBF00
+$aggieSage: #6CCA98
+
+.bg-aggie-blue
+  background-color: $aggieBlue !important
+
+.bg-sunflower
+  background-color: $aggieSunflower
+
+.text-aggie-blue
+  color: $aggieBlue !important
+
+.switch label input[type=checkbox]:checked + .lever:after
+  background-color: #fff
+
+.switch label
+  input[type=checkbox]
+    &+.lever
+      background-color: gray
+    &:checked
+      &+.lever
+        background-color: green

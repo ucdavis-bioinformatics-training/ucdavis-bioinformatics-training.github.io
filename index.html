@@ -38,7 +38,7 @@ css: ["index.css"]
         </a>
       </li>
       {% if paginator.page == 1 %}
-      <li class="active teal">
+      <li class="active bg-aggie-blue">
         <a href="#!">1</a>
       {% else %}
       <li class="waves-effect">
@@ -47,7 +47,7 @@ css: ["index.css"]
       </li>
       {% for count in (2..paginator.total_pages) %}
       {% if count == paginator.page %}
-      <li class="active teal"><a href="#!">{{count}}</a></li>
+      <li class="active bg-aggie-blue"><a href="#!">{{count}}</a></li>
       {% else %}
       <li class="waves-effect"><a href="{{site.baseurl}}/page{{count}}">{{count}}</a></li>
       {% endif %}

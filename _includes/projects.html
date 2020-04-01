@@ -1,4 +1,4 @@
-{% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse  %}
+{% assign sorted_repos = site.github.public_repositories | sort: 'created_at') | reverse %}
 <div class="col s12 switch">
   <label>
     Show forked projects
@@ -11,7 +11,9 @@
   <div class="card hoverable">
     <div class="card-image waves-effect waves-block waves-light geopattern activator" data-pattern-id="{{repo.name}}">
       <i class="material-icons waves-effect waves-block waves-light">more_vert</i>
-      <a class="card-title center-align valign-wrapper" href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+      <a class="card-title center-align valign-wrapper" href="{{repo.html_url}}" target="_blank">
+        {{repo.name}}
+      </a>
     </div>
     <div class="card-content valign-wrapper center-align activator">
       <span class="activator grey-text text-darken-1">{{repo.description}}</span>
