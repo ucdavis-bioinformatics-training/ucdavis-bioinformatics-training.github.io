@@ -16,7 +16,7 @@
 title: ucdavis-bioinformatics-training
 description: > # this means to ignore newlines until "baseurl:"
   Site for UC Davis Bioinformatics Core Training Materials
-baseurl: ""
+baseurl: "/"
 url: "https://ucdavis-bioinformatics-training.github.io"
 permalink: /:year/:month/:day/:title
 repository: ucdavis-bioinformatics-training/ucdavis-bioinformatics-training.github.io
