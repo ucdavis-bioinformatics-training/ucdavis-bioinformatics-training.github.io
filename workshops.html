@@ -1,0 +1,45 @@
+---
+layout: page
+title: "UC Davis Bioinformatics Core Training Program Course Materials"
+css: ["index.css", "projects.css"]
+js: ["https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js", "projects.js"]
+---
+
+
+<div class="col s12">
+  <p>To learn more about the UC Davis Bioinformatics data analysis services and training program, visit <a href="https://bioinformatics.ucdavis.edu/" target="_blank" rel="noreferrer noopener">our website</a>. Dates and prices for our current workshops can be found on the <a href="https://registration.genomecenter.ucdavis.edu/" target="_blank" rel="noreferrer noopener">Genome Center Event Registration</a> site.</p>
+</div>
+
+<!--
+{% assign sorted_repos = site.github.public_repositories | sort: 'created_at') | reverse %}
+{% for repo in sorted_repos %}
+  <div class="card hoverable">
+    <div class="card-image waves-effect waves-block waves-light geopattern activator" data-pattern-id="{{repo.name}}">
+      {% assign repo_href = repo.html_url %}
+      {% if repo.has_pages %}
+      {% assign repo_href = {repo_href | regex_replace: 'github.com/ucdavis-bioinformatics-training', 'ucdavis-bioinformatics-training.github.io'} %}
+      {% endif %}
+      <a class="card-title center-align valign-wrapper" href="{{repo_href}}" target="_blank">
+        {{repo.name}}
+      </a>
+    </div>
+    <div class="card-content valign-wrapper center-align activator">
+      <span class="activator grey-text text-darken-1">{{repo.description}}</span>
+    </div>
+  </div>
+  {% endfor %}
+-->
+
+{% assign sorted_repos = site.github.public_repositories | sort: 'created_at' | reverse %}
+{% for repo in sorted_repos %}
+  {% if repo.has_pages %}
+      <a href="{{repo.html_url | replace: 'github.com/ucdavis-bioinformatics-training', 'ucdavis-bioinformatics-training.github.io' }}" target="_blank">
+        {{repo.name | replace: "-", " " | replace: "_", " "}}<br/>
+      </a>
+  {% else %}
+      <a href="{{repo.html_url}}" target="_blank">
+        {{repo.name | replace: "-", " " | replace: "_", " "}}<br/>
+      </a>
+  {% endif %}
+  {{repo.description}}<br/>
+{% endfor %}
