@@ -1,1 +1,1 @@
-# UCD Bioinformatics Core Training Workshops
+# UCD Bioinformatics Core Training Workshops Course Materials
