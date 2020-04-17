@@ -1,5 +1,4 @@
 ---
-layout: page
 css: ["index.css", "projects.css"]
 ---
 
@@ -26,6 +25,12 @@ a:visited {
   color: #660099;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
 </style>
 
 <img src="/assets/res/biocore_banner.png">
@@ -42,15 +47,9 @@ a:visited {
 {% assign sorted_repos = site.github.public_repositories | sort: 'created_at' | reverse %}
 {% for repo in sorted_repos %}
 <h3>
-  {% if repo.has_pages %}
-      <a href="{{repo.html_url | replace: 'github.com/ucdavis-bioinformatics-training', 'ucdavis-bioinformatics-training.github.io' }}" target="_blank">
+      <a href="{% if repo.has_pages %} {{repo.html_url | replace: 'github.com/ucdavis-bioinformatics-training', 'ucdavis-bioinformatics-training.github.io' }} {% else %} {{repo.html_url}} {% endif %}" target="_blank">
         {{repo.name | replace: "-", " " | replace: "_", " "}}<br/>
       </a>
-  {% else %}
-      <a href="{{repo.html_url}}" target="_blank">
-        {{repo.name | replace: "-", " " | replace: "_", " "}}<br/>
-      </a>
-  {% endif %}
 </h3>
 <h4>{{repo.description}}</h4>
 <hr/>
