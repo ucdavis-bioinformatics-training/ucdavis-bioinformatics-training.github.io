@@ -1,8 +1,6 @@
 ---
 layout: page
-title: "UC Davis Bioinformatics Core Training Program Course Materials"
 css: ["index.css", "projects.css"]
-js: ["https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js", "projects.js"]
 ---
 
 
@@ -22,5 +20,5 @@ js: ["https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.
         {{repo.name | replace: "-", " " | replace: "_", " "}}<br/>
       </a>
   {% endif %}
-  {{repo.description}}<br/>
+  {{repo.description}}<br/><br/>
 {% endfor %}
