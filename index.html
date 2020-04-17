@@ -50,6 +50,7 @@ h1 {
 <hr/>
 {% assign sorted_repos = site.github.public_repositories | sort: 'created_at' | reverse %}
 {% for repo in sorted_repos %}
+
 <h3>
       <a href="{% if repo.has_pages %} {{repo.html_url | replace: 'github.com/ucdavis-bioinformatics-training', 'ucdavis-bioinformatics-training.github.io' }} {% else %} {{repo.html_url}} {% endif %}" target="_blank">
         {{repo.name | replace: "-", " " | replace: "_", " "}}<br/>
@@ -57,4 +58,5 @@ h1 {
 </h3>
 <h4>{{repo.description}}</h4>
 <hr/>
+
 {% endfor %}
