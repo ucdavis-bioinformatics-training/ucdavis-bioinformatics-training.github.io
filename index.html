@@ -46,7 +46,7 @@ h1 {
 
 <hr/>
 <hr/>
-{% assign sorted_repos = site.github.public_repositories | sort: 'date' | reverse %}
+{% assign sorted_repos = site.github.public_repositories | sort: 'updated_at' | reverse %}
 {% for repo in sorted_repos %}
 {% if repo.description %}
 <h3>
